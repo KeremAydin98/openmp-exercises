@@ -22,10 +22,10 @@ int main()
 	{
 
 	int i, id, nthrds;
-		double x;
-		id = omp_get_thread_num();
-		nthrds = omp_get_num_threads();
-		if (id==0) nthreads=nthrds;
+	double x;
+	id = omp_get_thread_num();
+	nthrds = omp_get_num_threads();
+	if (id==0) nthreads=nthrds;
 
 	for (i=0;i<num_steps;i=i+nthrds)
 	{
