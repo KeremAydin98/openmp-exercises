@@ -3,13 +3,13 @@
 #include <omp.h>
 
 
-int bigcalc(int id, double A[], double B[]);
+int bigcalc(int id, int A[], int B[]);
 
 
 int main()
 {
-	double A[10];
-	double B[10];	
+	int A[10];
+	int B[10];
 
 
 	#pragma omp parallel
@@ -26,12 +26,12 @@ int main()
 	
 	for(int i; i<10; i++)
 	{
-		printf(" The result is %f\n", B[i]);
+		printf(" The result is %d\n", B[i]);
 	}
 	
 }
 
-int bigcalc(int id, double A[], double B[])
+int bigcalc(int id, int A[], int B[])
 {
 	
 	if (id>0)
